@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Notifications\RegisteredUser;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -41,14 +44,32 @@ class RegisterController extends Controller
     }
 
 
+    public function confirm($id, $token){
+        $user = User::where('id',$id)->where('confirmation_token',$token)->first();
+        if($user){
+           $user->update(['confirmation_token' => null]);
+           $this->guard()->login($user);
+           return redirect($this->redirectPath())->with('success','Votre compte a bien été confirmé');
+        } else {
+            return redirect('/login')->with('error','Ce lien n\'est n\'est pas valide');
+        }
 
-    public function register(RegistersUsers $request)
+
+    }
+
+
+
+
+
+
+    public function register(Request $request)
     {
         $this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));
+        $user->notify(new RegisteredUser());
 
-        return redirect('/login')->with('success','votre compte a bien été créé 
+        return redirect('/login')->with('success','Votre compte a bien été créé 
                                                        merci de regarder vos e-mails 
                                                        pour le confirmer.');
     }
@@ -88,7 +109,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'confirmation_token' => bcrypt(str_random(16))
+            'confirmation_token' => str_replace('/','',Hash::make(str_random(16)))
         ]);
     }
 }
