@@ -1,3 +1,10 @@
+/*
+Corps
+*/
+.panel {
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
 
 
@@ -5,7 +12,7 @@
 Footer
 */
 .footer {
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -19,11 +26,17 @@ Footer
 /**
 Grille d'affichage
  */
-.image {
+
+.thumbnail>img, .thumbnail>a{
     display: block;
-    width: 25%;
-    height: 25%;
+    max-width: 252,5px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 380px;
 }
+
+
 
 .overlay {
     position: absolute;
@@ -31,14 +44,18 @@ Grille d'affichage
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     opacity: 0;
     transition: .5s ease;
-    background-color: #008CBA;
+    background-color: cornflowerblue;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 8%;
+
 }
 
-.container:hover .overlay {
+.mosaique:hover .overlay {
     opacity: 1;
 }
 
@@ -54,7 +71,7 @@ Grille d'affichage
 }
 
 .mosaique {
-    padding-top: 5%;
-    padding-right: 10%;
-    padding-left: 10%;
+    width: 280px;
+    height: auto;
+    padding-left: -10%;
 }

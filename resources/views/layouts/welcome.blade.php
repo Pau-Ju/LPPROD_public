@@ -8,10 +8,13 @@
 
         <title>Netflux</title>
 
-        <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css/bootstrap.min.css">
+
+                                                <!--Feuilles CSS-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="/css/app.css" rel="stylesheet">
-        <link href="/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/style.css">
+
 
     </head>
 
@@ -47,7 +50,7 @@
                                 <input type="text" class="form-control" placeholder="Search" name="q">
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit">
-                                        <i class="fa fa-search" style="color:#2a88bd;"></i>
+                                        <i class="fa fa-search" style="color:cornflowerblue;"></i>
                                     </button>
                                 </div>
                             </div>
