@@ -1,71 +1,123 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Netflux">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Netflux">
 
-    <title>Netflux</title>
+        <title>Netflux</title>
 
+        <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="/css/app.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+    </head>
 
-</head>
-
-<body>
-
-<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" >
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+    <body>
+        <div id="app">
+            <nav class="navbar navbar-default" role="navigation">
+                <!--Nom du site-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
                 </div>
-            </li>
-            <div class="flex-center position-ref full-height">
-                @if (Route::has('login'))
-                    <li class="nav-item ">
+                <!--Contenu de la navBar-->
+                <div class="navbar-collapse collapse">
+                    <!--A gauche-->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="nav-item "><a  href=""> Top séries</a></li>
                         @auth
-                            <a  class=".text-white" href="{{ url('/home') }}">Home</a>
-                        @else
-                            <a class="text-white" href="{{ route('login') }}">Login</a>
-                            <a class="text-white" href="{{ route('register') }}">Register</a>
+                            <li class="nav-item"><a href=""> Favoris </a></li>
                         @endauth
-                    </li>
-                @endif
-            </div>
 
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
-        </form>
-
-    </div>
-</nav>
-
-<main>
-
-</main>
+                    </ul>
 
 
-</body>
+                    <div class=" nav-item col-sm-3 col-md-3">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" name="q">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="fa fa-search" style="color:#2a88bd;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <!--A droite-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item "><a href="{{ route('login') }}">
+                                    <i class="fa fa-user-circle-o fa-2x" style="color: cornflowerblue" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        @else
+                            <li class="nav-item ">
+                                <a class="nav-link" href=""> <i class="fa fa-bell-o fa-2x" style="color: cornflowerblue" aria-hidden="true"></i><span class="badge" style="background-color: cornflowerblue">5</span></a>
+                            </li>
+
+                            <li class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" style="color: cornflowerblue" >
+                                            Déconnexion
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </nav>
+
+
+
+        @if(session('success'))
+                <div class="container">
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                </div>
+            @endif
+
+            @if(session('error'))
+                <div class="container">
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                </div>
+            @endif
+        </div>
+
+        @yield('content')
+
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
+    </body>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Copyright© 2018</span>
+        </div>
+    </footer>
 </html>
