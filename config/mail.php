@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'noreply@netflux.tv'),
-        'name' => env('MAIL_FROM_NAME', 'Netflux'),
+        'address' => env('MAIL_FROM_ADDRESS', 'noreply@lpprodseries.fr'),
+        'name' => env('MAIL_FROM_NAME', 'Lp Prod'),
     ],
 
     /*

@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /*
+     * Use for comments
+     */
+    public function comments()
+    {
+        return $this->hasMany(\Laravelista\Comments\Comments\Comment::class);
+    }
 }

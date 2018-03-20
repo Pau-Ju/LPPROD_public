@@ -1,10 +1,75 @@
 /*
-Corps
+Etoiles
 */
-.panel {
-    margin-left: 10%;
-    margin-right: 10%;
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+    border: none;
+    float: left;
+    position: absolute;
+    top: 55%;
+    bottom: 0;
+    left: 25%;
+
 }
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+/*
+Favoris
+*/
+.coeur {
+   color: #ff0000;
+}
+
+.smiley {
+    color: #FFFF00;
+}
+.delete {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    opacity: 1;
+    color: red;
+}
+.fa-star-o {
+    color: #FFFF00;
+}
+.fa-film {
+    color: cornflowerblue;
+}
+
 
 
 
@@ -12,10 +77,12 @@ Corps
 Footer
 */
 .footer {
-    position: static;
-    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
     width: 100%;
-    height: 60px;
+    height: auto;
     line-height: 60px;
     background-color: #fff;
     border: 1px solid transparent;
@@ -26,18 +93,14 @@ Footer
 /**
 Grille d'affichage
  */
-
 .thumbnail>img, .thumbnail>a{
     display: block;
-    max-width: 252,5px;
+    max-width: 252,5px;  /*max-content*/
     height: auto;
     margin-left: auto;
     margin-right: auto;
     min-height: 380px;
 }
-
-
-
 .overlay {
     position: absolute;
     top: 0;
@@ -46,19 +109,17 @@ Grille d'affichage
     right: 0;
     height: auto;
     width: auto;
-    opacity: 0;
     transition: .5s ease;
-    background-color: cornflowerblue;
+    opacity: 0;
+    background-color: rgba(100,149,237,0.9);
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 8%;
+    margin-bottom: 7%;
 
 }
-
 .mosaique:hover .overlay {
-    opacity: 1;
+    opacity: 0.8;
 }
-
 .text {
     color: white;
     font-size: 20px;
@@ -69,9 +130,37 @@ Grille d'affichage
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
-
 .mosaique {
     width: 280px;
     height: auto;
     padding-left: -10%;
+}
+
+
+/*
+For no result page
+*/
+ body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+     padding-bottom: 5vmax;
+}
+.full-height {
+    height: 40vw;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.position-ref {
+    position: relative;
+}
+.content {
+    text-align: center;
+}
+.title {
+    font-size: 36px;
 }

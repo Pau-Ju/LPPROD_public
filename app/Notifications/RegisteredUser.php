@@ -42,7 +42,7 @@ class RegisteredUser extends Notification
     {
         return (new MailMessage)
 
-            ->subject('Incription sur le site Netflux.tv')
+            ->subject('Incription sur le site LP Prod Séries')
             ->line('Votre compte a bien été créé mais il doit être confirmé.
                         Pour cela merci de cliquer sur le lien suivant.')
             ->action('Confirmer mon compte', url("/confirm/{$notifiable->id}/{$notifiable->confirmation_token}"))
