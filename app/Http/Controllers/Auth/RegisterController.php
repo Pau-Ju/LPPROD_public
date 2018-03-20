@@ -59,7 +59,7 @@ class RegisterController extends Controller
 
 
 
-
+ss
 
 
     public function register(Request $request)
