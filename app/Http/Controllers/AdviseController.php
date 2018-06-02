@@ -29,7 +29,7 @@ class AdviseController extends Controller
                               AND pFAV.id_Post_Serie <> pOther.id_Post_Serie
                               AND pFAV.id_Post_Serie = (SELECT id_Serie
                                                         FROM series
-                                                        WHERE name = ?)
+                                                        WHERE name = ".[$fav->name].")
                               GROUP BY pFAV.id_Post_Serie, pOther.id_Post_Serie
                             )
                             
@@ -45,7 +45,7 @@ class AdviseController extends Controller
                                                         AND p.id_Post_Serie = n.idOtherSerie))) score
                               FROM numerator n, series s
                               WHERE n.idOtherSerie = s.id_Serie
-                              ORDER BY 2 DESC, 1;", [$fav->name]);
+                              ORDER BY 2 DESC, 1;");
         }
 
 
