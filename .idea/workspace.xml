@@ -5,11 +5,563 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aee88db9-6ec9-4ebf-931d-6be47973dcbe" name="Default" comment="To do :&#10;      - pagination&#10;      - favoris&#10;      - notes&#10;      - recommandations">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" />
+      <change afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Serie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine-dbal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Attribute.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Attributes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Enum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/IgnoreAnnotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Required.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Target.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationRegistry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/CachedReader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocLexer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/FileCacheReader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/IndexedReader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/PhpParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Reader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/SimpleAnnotationReader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/TokenParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/annotations/phpstan.neon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/UPGRADE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ApcuCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ArrayCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CacheProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ChainCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ClearableCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/CouchbaseCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ExtMongoDBCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FileCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FilesystemCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FlushableCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/LegacyMongoDBCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcacheCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MemcachedCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MongoDBCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiDeleteCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiGetCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiOperationCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/MultiPutCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/PhpFileCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/PredisCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RedisCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/RiakCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/SQLite3Cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/Version.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/VoidCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/WinCacheCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/XcacheCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/ZendDataCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/AbstractLazyCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Collection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Criteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Expr/ClosureExpressionVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Expr/Comparison.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Expr/CompositeExpression.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Expr/Expression.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Expr/ExpressionVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Expr/Value.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ExpressionBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Selectable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/UPGRADE_TO_2_1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/UPGRADE_TO_2_2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/humbug.json.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/ClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/CommonException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Comparable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/EventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/EventManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/EventSubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Lexer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/NotifyPropertyChanged.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/AbstractManagerRegistry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ConnectionRegistry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Event/LifecycleEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Event/LoadClassMetadataEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Event/ManagerEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Event/OnClearEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Event/PreUpdateEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ManagerRegistry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/AbstractClassMetadataFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/ClassMetadata.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/ClassMetadataFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/AnnotationDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/DefaultFileLocator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/FileDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/FileLocator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/PHPDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/StaticPHPDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/SymfonyFileLocator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/MappingException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/ReflectionService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/RuntimeReflectionService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/StaticReflectionService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManagerAware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManagerDecorator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/PersistentObject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Proxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/PropertyChangedListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/AbstractProxyFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/Autoloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/Exception/OutOfBoundsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/Exception/ProxyException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/Exception/UnexpectedValueException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/Proxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/ProxyDefinition.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Proxy/ProxyGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/ClassFinderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/Psr0FindFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/ReflectionProviderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/RuntimePublicReflectionProperty.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionProperty.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Util/ClassUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Util/Debug.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Version.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/common/phpstan.neon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/.scrutinizer.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/SECURITY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/UPGRADE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/bin/doctrine-dbal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/bin/doctrine-dbal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Cache/ArrayStatement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Cache/CacheException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Cache/QueryCacheProfile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Cache/ResultCacheStatement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/ColumnCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Configuration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/ConnectionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connections/MasterSlaveConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractDB2Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractDriverException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractOracleDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractPostgreSQLDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractSQLAnywhereDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractSQLServerDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractSQLiteDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/DriverException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/DrizzlePDOMySql/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/DrizzlePDOMySql/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/ExceptionConverterDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Statement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/Mysqli/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/Mysqli/MysqliConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/Mysqli/MysqliException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/Mysqli/MysqliStatement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/OCI8/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/OCI8/OCI8Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/OCI8/OCI8Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/OCI8/OCI8Statement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOIbm/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOOracle/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOPgSql/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlite/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Statement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PingableConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/ResultStatement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLAnywhere/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLAnywhere/SQLAnywhereConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLAnywhere/SQLAnywhereException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLAnywhere/SQLAnywhereStatement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLSrv/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLSrv/LastInsertId.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLSrv/SQLSrvConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLSrv/SQLSrvException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/SQLSrv/SQLSrvStatement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/ServerInfoAwareConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/Statement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/StatementIterator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/ConnectionEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/Listeners/MysqlSessionInit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/Listeners/OracleSessionInit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/Listeners/SQLSessionInit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaAlterTableAddColumnEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaAlterTableChangeColumnEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaAlterTableEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaAlterTableRemoveColumnEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaAlterTableRenameColumnEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaColumnDefinitionEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaCreateTableColumnEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaCreateTableEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaDropTableEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaIndexDefinitionEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Events.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ConnectionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ConstraintViolationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DatabaseObjectExistsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DatabaseObjectNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DeadlockException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/DriverException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ForeignKeyConstraintViolationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/InvalidFieldNameException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/LockWaitTimeoutException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/NonUniqueFieldNameException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/NotNullConstraintViolationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ReadOnlyException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/RetryableException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ServerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/SyntaxErrorException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/TableExistsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/TableNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/UniqueConstraintViolationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/FetchMode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Id/TableGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Id/TableGeneratorSchemaVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/LockMode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Logging/DebugStack.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Logging/EchoSQLLogger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Logging/LoggerChain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Logging/SQLLogger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/ParameterType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/AbstractPlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/DB2Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/DateIntervalUnit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/DrizzlePlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/DB2Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/DrizzleKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/KeywordList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/MariaDb102Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/MsSQLKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/MySQL57Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/MySQLKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/OracleKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQL100Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQL91Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQL92Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQL94Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/PostgreSQLKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/ReservedKeywordsValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLAnywhere11Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLAnywhere12Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLAnywhere16Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLAnywhereKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLServer2005Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLServer2008Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLServer2012Keywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLServerKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLiteKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/MariaDb1027Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/MySQL57Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/MySqlPlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/OraclePlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSQL100Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSQL91Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSQL92Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSQL94Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/PostgreSqlPlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywhere11Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywhere12Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywhere16Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywherePlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAzurePlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServer2005Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServer2008Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServer2012Platform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServerPlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SqlitePlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/TrimMode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Portability/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Portability/Statement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/Expression/CompositeExpression.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/Expression/ExpressionBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/QueryBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/QueryException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/README.markdown" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/SQLParserUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/SQLParserUtilsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/AbstractAsset.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/AbstractSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Column.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/ColumnDiff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Comparator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Constraint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/DB2SchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/DrizzleSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/ForeignKeyConstraint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Identifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/MySqlSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/OracleSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/PostgreSqlSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/SQLAnywhereSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/SQLServerSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Schema.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/SchemaConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/SchemaDiff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/SchemaException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Sequence.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/SqliteSchemaManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Synchronizer/AbstractSchemaSynchronizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Synchronizer/SchemaSynchronizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Synchronizer/SingleDatabaseSynchronizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/TableDiff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/View.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/AbstractVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/CreateSchemaSqlCollector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/DropSchemaSqlCollector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/Graphviz.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/NamespaceVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/RemoveNamespacedAssets.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/SchemaDiffVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Schema/Visitor/Visitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/PoolingShardConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/PoolingShardManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/SQLAzure/SQLAzureFederationsSynchronizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/SQLAzure/SQLAzureShardManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/SQLAzure/Schema/MultiTenantVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/ShardChoser/MultiTenantShardChoser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/ShardChoser/ShardChoser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/ShardManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Sharding/ShardingException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Statement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Tools/Console/Command/ImportCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Tools/Console/Command/ReservedWordsCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Tools/Console/Command/RunSqlCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Tools/Console/ConsoleRunner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Tools/Console/Helper/ConnectionHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/TransactionIsolationLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/ArrayType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/BigIntType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/BinaryType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/BlobType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/BooleanType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/ConversionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateImmutableType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateIntervalType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeImmutableType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeTzImmutableType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateTimeTzType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DateType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/DecimalType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/FloatType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/GuidType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/IntegerType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/JsonArrayType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/JsonType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/ObjectType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/PhpDateTimeMappingType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/PhpIntegerMappingType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/SimpleArrayType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/SmallIntType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/StringType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TextType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeImmutableType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeImmutableType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Version.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/VersionAwarePlatformDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Exception/GeneratorException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Exception/ValidationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/LineableInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/ArgumentModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/BaseMethodModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/BasePropertyModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/ClassModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/ClassNameModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/ConstantModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/DocBlockModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/MethodModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/NamespaceModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/PropertyModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/Traits/AbstractModifierTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/Traits/AccessModifierTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/Traits/DocBlockTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/Traits/FinalModifierTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/Traits/StaticModifierTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/Traits/ValueTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/UseClassModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/UseTraitModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/VirtualMethodModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/Model/VirtualPropertyModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/RenderableInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/code-generator/src/RenderableModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Command/GenerateModelCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/EloquentModelBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Exception/ConfigException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Exception/GeneratorException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Generator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Helper/EmgHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Model/BelongsTo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Model/BelongsToMany.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Model/EloquentModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Model/HasMany.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Model/HasOne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Model/Relation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/CustomPrimaryKeyProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/CustomPropertyProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/ExistenceCheckerProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/FieldProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/NamespaceProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/ProcessorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/RelationProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Processor/TableNameProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Provider/GeneratorServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/Resources/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator/src/TypeRegistry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/behat.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/provides.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/readme.zh.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/spec/Way/Generators/Compilers/TemplateCompilerSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/spec/Way/Generators/GeneratorSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/spec/Way/Generators/Parsers/MigrationFieldsParserSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/spec/Way/Generators/Parsers/MigrationNameParserSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/spec/Way/Generators/SchemaCreatorSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/ControllerGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/GeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/MigrationGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/ModelGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/PivotGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/PublishTemplatesCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/ResourceGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/ScaffoldGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/SeederGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Commands/ViewGeneratorCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Compilers/Compiler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Compilers/TemplateCompiler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Filesystem/FileAlreadyExists.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Filesystem/FileNotFound.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Filesystem/Filesystem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Generator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/GeneratorsServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/InvalidMigrationName.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Parsers/MigrationFieldsParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Parsers/MigrationNameParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/SchemaCreator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Syntax/AddToTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Syntax/CreateTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Syntax/DroppedTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Syntax/RemoveFromTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/Syntax/Table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/Data/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/Data/Migration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/controller.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/migration.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/model.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/scaffolding/controller.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/scaffolding/model.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/schema.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/seed.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/Way/Generators/templates/view.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/src/config/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/features/bootstrap/FeatureContext.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/features/generators.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/features/migrations.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/AddTitleToOrdersTable.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/CreateComplexOrdersTable.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/CreateOrdersTable.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/DropOrdersTable.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/Order.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/OrdersController.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/RecentOrdersTableSeeder.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/RemoveTitleFromOrdersTable.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/laravel-4-generators/tests/stubs/index.blade.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Generators/FieldGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Generators/ForeignKeyGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Generators/IndexGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Generators/SchemaGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/MigrateGenerateCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/MigrationsGeneratorServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Syntax/AddForeignKeysToTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Syntax/AddToTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Syntax/DroppedTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Syntax/RemoveForeignKeysFromTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/src/Xethron/MigrationsGenerator/Syntax/Table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/tests/Xethron/MigrationsGenerator/MigrationsGeneratorServiceProviderTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xethron/migrations-generator/tests/Xethron/MigrationsGenerator/MigrationsGeneratorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/netflux.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/netflux.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/advise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/advise.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,53 +610,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <marker date="1521568476315" expanded="true" signature="339:353" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="1543:1553" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="1588:1619" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="1976:1989" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="2077:2091" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="2221:2237" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="2332:2351" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="2547:2555" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="2852:2868" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="3411:3431" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="3680:3697" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="4106:4123" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="4215:4229" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="4520:4538" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="4660:4680" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="4769:4785" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="4906:4924" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="5027:5036" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="5088:5108" ph="..." />
-                <marker date="1521568476315" expanded="true" signature="5148:5156" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="36" column="97" lean-forward="false" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
-              <folding />
+            <state relative-caret-position="49">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -112,9 +622,48 @@
       <file leaf-file-name="AdviseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdviseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="85" lean-forward="false" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="85" />
-              <folding />
+            <state relative-caret-position="510">
+              <caret line="32" column="82" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advise.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/advise.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding>
+                <marker date="1528232893821" expanded="true" signature="339:353" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="1593:1603" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="1638:1669" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="2026:2039" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="2127:2141" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="2271:2287" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="2382:2401" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="2597:2605" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="2902:2918" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="3461:3481" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="3730:3747" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="4156:4173" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="4265:4279" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="4570:4588" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="4710:4730" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="4819:4835" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="4956:4974" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="5077:5086" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="5138:5158" ph="..." />
+                <marker date="1528232893821" expanded="true" signature="5198:5206" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,18 +672,7 @@
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-              <folding />
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -173,6 +711,14 @@
       <command text="composer require &quot;laravelcollective/html&quot;" />
       <command text="composer update" />
       <command text="composer dumpautoload" />
+      <command text="composer require krlove/eloquent-model-generator --dev" />
+      <command text="composer require xethron/migrations-generator --dev" />
+      <command text="php artisan migrate:generate" />
+      <command text="php artisan krlove:generate:model Serie" />
+      <command text="php artisan krlove:generate:model Comment" />
+      <command text="php artisan migrate:generate" />
+      <command text="composer require --dev &quot;xethron/migrations-generator&quot;" />
+      <command text="php artisan migrate:generate" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -184,10 +730,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2018_01_18_101348_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_01_20_215014_add_confirmation_toen_to_users.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
@@ -205,13 +753,11 @@
         <option value="$PROJECT_DIR$/vendor/laravelista/comments/src/Database/Migrations/2016_09_22_234554_create_comments_table.php" />
         <option value="$PROJECT_DIR$/vendor/laravelista/comments/src/Comments/Comment.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/app/Notifications/RegisteredUser.php" />
         <option value="$PROJECT_DIR$/resources/views/mosaique.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/resources/views/search.blaqe.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/results.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/search.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/footer.blade.php" />
@@ -225,7 +771,6 @@
         <option value="$PROJECT_DIR$/resources/views/top.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/serie.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SerieController.php" />
-        <option value="$PROJECT_DIR$/resources/views/advise.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/favorites.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/results.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
@@ -233,11 +778,15 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/resources/views/advise.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" />
+        <option value="$PROJECT_DIR$/config/mail.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/index.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -249,7 +798,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
@@ -326,9 +883,18 @@
       <path value="$PROJECT_DIR$/vendor/laravelista/comments" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/krlove/code-generator" />
+      <path value="$PROJECT_DIR$/vendor/krlove/eloquent-model-generator" />
+      <path value="$PROJECT_DIR$/vendor/xethron/migrations-generator" />
+      <path value="$PROJECT_DIR$/vendor/xethron/laravel-4-generators" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="21" />
     <option name="y" value="56" />
     <option name="width" value="946" />
@@ -338,77 +904,82 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netflux" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -417,11 +988,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -446,9 +1018,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -485,6 +1054,10 @@
       <workItem from="1527579100046" duration="1563000" />
       <workItem from="1527941462509" duration="448000" />
       <workItem from="1527960297344" duration="141000" />
+      <workItem from="1528114563827" duration="3812000" />
+      <workItem from="1528148432864" duration="6277000" />
+      <workItem from="1528232599917" duration="1105000" />
+      <workItem from="1528269245263" duration="3038000" />
     </task>
     <task id="LOCAL-00001" summary="Adding of confirmation mail after registered">
       <created>1516487142260</created>
@@ -504,36 +1077,36 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156149000" />
+    <option name="totallyTimeSpent" value="170381000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="21" y="56" width="1922" height="874" extended-state="7" />
-    <editor active="true" />
+    <frame x="-1" y="30" width="1922" height="1004" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19427083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203125" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="14" visible="true" weight="0.3203125" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3294271" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32924107" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32885906" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19427083" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32916668" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3294271" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32965517" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="11" weight="0.32965517" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294271" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,45 +1131,8 @@
       </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/pagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/passwords.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/footer.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/mosaique.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2784">
@@ -618,67 +1154,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="69" lean-forward="false" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/last.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/serie.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/top.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="58" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="11" />
+          <caret line="11" column="58" selection-end-line="23" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SerieController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FavoritesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="82" />
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchContoller.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/advise.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/favorites.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="77" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -689,251 +1204,247 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-319">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state relative-caret-position="-319" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="76" />
+          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
-          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/channels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/console.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="59" column="65" lean-forward="false" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/mail/html/message.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/mail/html/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1424">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state relative-caret-position="-510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="36" column="71" lean-forward="false" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
+          <caret line="36" column="71" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/Notifiable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/SendQueuedNotifications.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/Events/MessageSent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/Notification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Notifications/RegisteredUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdviseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="85" lean-forward="false" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
-          <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-          <folding />
+          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1908" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2095" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Notifications/RegisteredUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/SendsPasswordResetEmails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="81">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/advise.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdviseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="82" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <marker date="1521568476315" expanded="true" signature="339:353" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="1543:1553" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="1588:1619" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="1976:1989" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="2077:2091" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="2221:2237" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="2332:2351" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="2547:2555" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="2852:2868" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="3411:3431" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="3680:3697" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="4106:4123" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="4215:4229" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="4520:4538" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="4660:4680" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="4769:4785" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="4906:4924" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="5027:5036" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="5088:5108" ph="..." />
-            <marker date="1521568476315" expanded="true" signature="5148:5156" ph="..." />
-          </folding>
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="97" lean-forward="false" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
-          <folding />
+        <state relative-caret-position="49">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1702">
+          <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding>
+            <marker date="1528232893821" expanded="true" signature="339:353" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="1593:1603" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="1638:1669" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="2026:2039" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="2127:2141" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="2271:2287" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="2382:2401" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="2597:2605" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="2902:2918" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="3461:3481" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="3730:3747" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="4156:4173" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="4265:4279" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="4570:4588" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="4710:4730" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="4819:4835" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="4956:4974" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="5077:5086" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="5138:5158" ph="..." />
+            <marker date="1528232893821" expanded="true" signature="5198:5206" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

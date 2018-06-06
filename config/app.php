@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,6 +181,16 @@ return [
          * Use for comments
          */
         Laravelista\Comments\Providers\CommentsServiceProvider::class,
+
+
+        /**
+         *Models & migrations generator
+         */
+        Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
+
+        Way\Generators\GeneratorsServiceProvider::class,
+        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
+
 
         /*
          * Form

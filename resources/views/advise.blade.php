@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('content')
-
+{!! var_dump($data) !!}
 
     <div class="container">
         @if(isset($top)&& count($top))
