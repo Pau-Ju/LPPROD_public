@@ -43,9 +43,15 @@ class AdviseController extends Controller
                                                   sqrt((SELECT sum(power(term_Frequency * idf, 2))
                                                         FROM posting p, keywords k
                                                         WHERE p.id_Post_Keyword = k.id_word
-                                                        AND p.id_Post_Serie = n.idOtherSerie))) score
-                              FROM numerator n, series s
+                                                        AND p.id_Post_Serie = n.idOtherSerie))) score, 
+                                                        
+                                                        AVG(notes.note) as moyenne,
+                                                        s.image_link
+                                                        
+                              FROM numerator n, series s, notes 
                               WHERE n.idOtherSerie = s.id_Serie
+                              AND s.id_Serie = notes.id_Notes_Serie
+                              GROUP BY s.name, s.image_link, score
                               ORDER BY 2 DESC, 1;");
 
 

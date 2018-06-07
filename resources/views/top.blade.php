@@ -2,12 +2,11 @@
 
 @section('content')
 
-
     <div class="container">
         @if(isset($top)&& count($top))
             <h1> Séries les mieux notées <i class="fa fa-star-o"></i>:</h1>
             <div class="row">
-                @foreach($top as $serie)
+                @foreach($pagination as $serie)
                     <div class="col-xs-3 mosaique">
                         <a href="{{url('serie/'.$serie->id.'/'.$serie->name)}}" class="thumbnail">
                             <img src="{!! $serie->url !!}" alt="{!! $serie->name !!}"
@@ -20,5 +19,6 @@
                 @endforeach
             </div>
         @endif
+            {{ $pagination->links()}}
     </div>
 @endsection

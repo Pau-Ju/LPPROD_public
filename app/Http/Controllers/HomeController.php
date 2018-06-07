@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Serie;
 use \Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
@@ -20,7 +20,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $all = DB::select('SELECT s.name as name, s.image_link as url, s.id_Serie as id FROM series s');
-        return view('home', compact('all'));
+
+
+        $series= Serie::paginate(12);
+        return view('home', compact('series'));
     }
 }

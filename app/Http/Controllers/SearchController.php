@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use \Illuminate\Support\Facades\DB;
+
+
 class SearchController extends Controller
 {
 
@@ -30,7 +33,7 @@ class SearchController extends Controller
                         ->select('s.id_Serie as id, s.name, s.image_link as url, s.release_date as release, sum(p.term_Frequency * k.idf) as score')
                         ->groupBy(array('id', 'name', 'url', 'release'))->get();
         */
-        $data=DB::select("SELECT s.id_Serie as id, s.name, s.image_link as url, sum(p.term_Frequency * k.idf) as score
+        $series=DB::select("SELECT s.id_Serie as id, s.name, s.image_link as url, sum(p.term_Frequency * k.idf) as score
                             FROM posting p, series s, keywords k
                             WHERE p.id_Post_Serie = s.id_Serie
                             AND p.id_Post_Keyword = k.id_Word
@@ -38,6 +41,16 @@ class SearchController extends Controller
                             GROUP BY s.id_Serie , s.name,s.image_link
                             ORDER BY 2 DESC, 1;");
 
-        return view('results', compact('data'));
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 12;
+
+        $path=LengthAwarePaginator::resolveCurrentPath();
+
+        $series= new LengthAwarePaginator(array_slice($series, $perPage * ($currentPage - 1), $perPage), count($series), $perPage, $currentPage,
+            ['path'=>$path, 'query'=> $request->query()
+            ]);
+
+
+        return view('results', compact('series'));
     }
 }

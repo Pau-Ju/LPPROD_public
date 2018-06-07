@@ -10,7 +10,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>LP Prod Séries</title>
-        <link rel="shortcut icon" type="image/x-icon" href="{{asset('/favicon.ico')}}"/>
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('favicon.ico')}}"/>
 
 
 
@@ -36,7 +36,8 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            {{ config('app.name', 'Laravel') }}
+                            {{-- ('app.name', 'Laravel') --}}
+                            <img src="{{asset('favicon.PNG')}}" class="img-responsive">
                         </a>
                     </div>
                     <!--Contenu de la navBar-->
@@ -112,6 +113,8 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
+
+    @yield('script')
 
     @include('footer')
 

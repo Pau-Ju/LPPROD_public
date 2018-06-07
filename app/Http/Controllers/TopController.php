@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\DB;
+
+
+
 class TopController extends Controller
 {
 
@@ -19,7 +23,14 @@ class TopController extends Controller
                             WHERE s.id_Serie = n.id_Notes_Serie
                             GROUP BY s.image_link, s.name, s.id_Serie HAVING avg(note)>3.5');
 
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 8;
 
-        return view('top', compact('top'));
+        $path=LengthAwarePaginator::resolveCurrentPath();
+
+        $pagination = new LengthAwarePaginator(array_slice($top, $perPage * ($currentPage - 1), $perPage), count($top), $perPage, $currentPage,['path'=>$path]);
+
+
+        return view('top', compact('top', 'pagination'));
     }
 }

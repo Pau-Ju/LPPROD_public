@@ -87,6 +87,7 @@ Footer
     background-color: #fff;
     border: 1px solid transparent;
     border-color: #d3e0e9;
+    z-index: 3;
 }
 
 
@@ -163,4 +164,13 @@ For no result page
 }
 .title {
     font-size: 36px;
+}
+
+.navbar-brand img{
+    margin-top: -16px;
+    max-height: 80px;
+}
+
+.navbar-header{
+    height: 64px;
 }

@@ -3,10 +3,10 @@
 @section('content')
 
     <div class="container">
-        @if(isset($data)&& count($data))
+        @if(isset($series)&& count($series))
             <h1> Voici les <i class="fa fa-film"></i> correspondant à votre <i class="fa fa-search"></i> :</h1>
             <div class="row">
-                @foreach($data as $serie)
+                @foreach($series as $serie)
                     <div class="col-xs-3 mosaique">
                         <a href="{{url('serie/'.$serie->id.'/'.$serie->name)}}" class="thumbnail">
                             <img src="{!! $serie->url !!}" alt="{!! $serie->name !!}"
@@ -26,5 +26,6 @@
                 </div>
             </div>
         @endif
+        {{$series->links()}}
     </div>
 @endsection
