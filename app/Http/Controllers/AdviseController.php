@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\DB;
 use \Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\LengthAwarePaginator;
+
+
 class AdviseController extends Controller
 {
 
@@ -31,10 +34,9 @@ class AdviseController extends Controller
                               AND pFAV.id_Post_Serie  in (SELECT id_Serie
                                                         FROM series
                                                         WHERE name in ".$favorites.")                     
-                              GROUP BY pFAV.id_Post_Serie, pOther.id_Post_Serie
-                            )
+                              GROUP BY pFAV.id_Post_Serie, pOther.id_Post_Serie)
                             
-                            SELECT s.name, n.numValue / (
+                            SELECT s.id_Serie as id, s.name as name, n.numValue / (
                                                   sqrt((SELECT sum(power(term_Frequency * idf, 2))
                                                         FROM posting p, keywords k
                                                         WHERE p.id_Post_Keyword = k.id_word
@@ -44,19 +46,27 @@ class AdviseController extends Controller
                                                         FROM posting p, keywords k
                                                         WHERE p.id_Post_Keyword = k.id_word
                                                         AND p.id_Post_Serie = n.idOtherSerie))) score, 
-                                                        
-                                                        AVG(notes.note) as moyenne,
-                                                        s.image_link
+                                                        ROUND(AVG(notes.note), 1) as moyenne,
+                                                        s.image_link as image_link,
+                                                        ROUND((SELECT distinct no.note FROM notes no WHERE no.id_Notes_User = ".$user_id." and no.id_Notes_Serie = s.id_Serie), 1) as note
                                                         
                               FROM numerator n, series s, notes 
                               WHERE n.idOtherSerie = s.id_Serie
                               AND s.id_Serie = notes.id_Notes_Serie
-                              GROUP BY s.name, s.image_link, score
+                              GROUP BY s.name, s.image_link, score, id
                               ORDER BY 2 DESC, 1;");
 
 
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 8;
 
-        return view('advise', compact('data', 'user_id'));
+        $path=LengthAwarePaginator::resolveCurrentPath();
+
+        $pagination = new LengthAwarePaginator(array_slice($data, $perPage * ($currentPage - 1), $perPage), count($data), $perPage, $currentPage,['path'=>$path]);
+
+
+
+        return view('advise', compact('data', 'pagination'));
     }
 
 
