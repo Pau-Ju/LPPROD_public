@@ -19,8 +19,9 @@
                     </div>
                 @endforeach
             </div>
+            {{ $series->links() }}
         @endif
-        {{ $series->links() }}
+
     </div>
 
 @endsection

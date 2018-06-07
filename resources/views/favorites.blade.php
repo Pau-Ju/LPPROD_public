@@ -4,10 +4,10 @@
 
 
     <div class="container">
-    @if(isset($data)&& count($data))
+    @if(isset($series)&& count($series))
             <h1> Vous <i class="fa fa-heart-o coeur"></i> ces séries :</h1>
             <div class="row">
-            @foreach($data as $serie)
+            @foreach($series as $serie)
                 <div class="col-xs-3 mosaique">
                     <a href="{{url('serie/'.$serie->id_Serie.'/'.$serie->name)}}" class="thumbnail">
                         <img src="{!! $serie->image_link !!}" alt="{!! $serie->name !!}"
@@ -20,7 +20,7 @@
                 </div>
             @endforeach
             </div>
-
+            {{ $series->links()}}
     @else
         <div class="flex-center position-ref full-height">
             <div class="content">

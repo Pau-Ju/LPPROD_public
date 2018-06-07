@@ -24,13 +24,13 @@ class TopController extends Controller
                             GROUP BY s.image_link, s.name, s.id_Serie HAVING avg(note)>3.5');
 
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $perPage = 8;
+        $perPage = 12;
 
         $path=LengthAwarePaginator::resolveCurrentPath();
 
-        $pagination = new LengthAwarePaginator(array_slice($top, $perPage * ($currentPage - 1), $perPage), count($top), $perPage, $currentPage,['path'=>$path]);
+        $series = new LengthAwarePaginator(array_slice($top, $perPage * ($currentPage - 1), $perPage), count($top), $perPage, $currentPage,['path'=>$path]);
 
 
-        return view('top', compact('top', 'pagination'));
+        return view('top', compact( 'series'));
     }
 }

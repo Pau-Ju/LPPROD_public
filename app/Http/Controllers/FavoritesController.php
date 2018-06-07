@@ -16,10 +16,10 @@ class FavoritesController extends Controller
     public function index()
     {
         $user_id = (int)Auth::user()->id;
-        $data = DB::table('series')->join('favorites', 'series.id_Serie', '=', 'favorites.id_Favorite_Serie')
+        $series = DB::table('series')->join('favorites', 'series.id_Serie', '=', 'favorites.id_Favorite_Serie')
                 ->where('favorites.id_Favorite_User','=', $user_id)->paginate(12);
 
 
-        return view('favorites', compact('data', 'user_id'));
+        return view('favorites', compact('series'));
     }
 }

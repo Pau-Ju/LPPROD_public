@@ -18,7 +18,7 @@
                     </div>
                 @endforeach
             </div>
-
+            {{$series->links()}}
         @else
             <div class="flex-center position-ref full-height">
                 <div class="content">
@@ -26,6 +26,6 @@
                 </div>
             </div>
         @endif
-        {{$series->links()}}
+
     </div>
 @endsection

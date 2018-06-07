@@ -3,10 +3,10 @@
 @section('content')
 
     <div class="container">
-        @if(isset($top)&& count($top))
+        @if(isset($series)&& count($series))
             <h1> Séries les mieux notées <i class="fa fa-star-o"></i>:</h1>
             <div class="row">
-                @foreach($pagination as $serie)
+                @foreach($series as $serie)
                     <div class="col-xs-3 mosaique">
                         <a href="{{url('serie/'.$serie->id.'/'.$serie->name)}}" class="thumbnail">
                             <img src="{!! $serie->url !!}" alt="{!! $serie->name !!}"
@@ -18,7 +18,8 @@
                     </div>
                 @endforeach
             </div>
+            {{ $series->links()}}
         @endif
-            {{ $pagination->links()}}
+
     </div>
 @endsection
