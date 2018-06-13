@@ -44,7 +44,7 @@ return [
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'lpprodseries'),
-            'username' => env('DB_USERNAME', 'netflux'),
+            'username' => env('DB_USERNAME', 'public'),
             'password' => env('DB_PASSWORD', '$LP_gt1d'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
