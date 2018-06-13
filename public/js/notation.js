@@ -54,7 +54,7 @@ function ChoixSelection(idListe, indice, nbEtoile){
 
     $.ajax({
 		url: '/ajax/note',
-        type: "post",
+        method: "post",
 		data : {'idSerie':idSerie[1],
 				'note': indice},
         success: function(data) {

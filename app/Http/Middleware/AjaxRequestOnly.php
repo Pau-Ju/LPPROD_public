@@ -19,7 +19,7 @@ class AjaxRequestOnly
         if($request->ajax()) {
             return $next($request);
         }
-        abort(403, 'Unauthorized Access!');
+        abort(403, 'Unauthorized action.');
     }
 
 }

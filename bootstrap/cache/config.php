@@ -2,9 +2,9 @@
   'app' => 
   array (
     'name' => 'LPProdSéries',
-    'env' => 'local',
-    'debug' => true,
-    'url' => 'http://localhost',
+    'env' => 'production',
+    'debug' => false,
+    'url' => 'http://lpprodseries.fr',
     'timezone' => 'UTC',
     'locale' => 'fr',
     'fallback_locale' => 'en',
@@ -288,7 +288,7 @@
       array (
         'driver' => 'local',
         'root' => '/srv/http/netflux/storage/app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'http://lpprodseries.fr/storage',
         'visibility' => 'public',
       ),
       's3' => 

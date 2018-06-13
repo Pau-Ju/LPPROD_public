@@ -8,7 +8,7 @@ function commenter(idSerie) {
 
     $.ajax({
         url: '/ajax/add-comment',
-        type: "post",
+        method: "post",
         data : {'idSerie':idSerie,
             'comment': document.getElementById("textarea").value},
         success: function(data) {
