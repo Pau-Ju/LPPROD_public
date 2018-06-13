@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Serie;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use \Illuminate\Support\Facades\DB;
 
 
@@ -18,10 +20,15 @@ class TopController extends Controller
      */
     public function index()
     {
-        $top = DB::select('SELECT avg(note) as note, s.name as name, s.image_link as url, s.id_Serie as id
-                            FROM notes n, series s
-                            WHERE s.id_Serie = n.id_Notes_Serie
-                            GROUP BY s.image_link, s.name, s.id_Serie HAVING avg(note)>3.5');
+        if(Auth::id()){
+
+            $user_id = (int)Auth::user()->id;
+
+            $top = Serie::getSeriesTopLogged($user_id);
+        }else{
+            $top = Serie::getSeriesTop();
+        }
+
 
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
         $perPage = 12;

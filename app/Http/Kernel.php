@@ -57,10 +57,11 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'ajax'=>\App\Http\Middleware\AjaxRequestOnly::class,
+
 
         /*
          * Use for comments
          */
-        'auth.comments' => \Laravelista\Comments\Http\Middleware\Authenticate::class
-    ];
+        'auth.comments' => \Laravelista\Comments\Http\Middleware\Authenticate::class,    ];
 }

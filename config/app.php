@@ -195,7 +195,7 @@ return [
         /*
          * Form
          */
-        'Collective\Html\HtmlServiceProvider',
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*

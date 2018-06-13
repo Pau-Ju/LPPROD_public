@@ -20,6 +20,10 @@
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/style.css">
 
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
+        @yield('script')
+
 
     </head>
 
@@ -110,12 +114,8 @@
         @yield('content')
 
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}"></script>
+
+
+        @include('footer')
     </body>
-
-    @yield('script')
-
-    @include('footer')
-
 </html>

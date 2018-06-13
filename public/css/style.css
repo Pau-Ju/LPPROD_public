@@ -7,47 +7,60 @@ fieldset, label { margin: 0; padding: 0; }
 h1 { font-size: 1.5em; margin: 10px; }
 
 /****** Style Star Rating Widget *****/
-
 .rating {
     border: none;
     float: left;
     position: absolute;
     top: 55%;
     bottom: 0;
-    left: 25%;
-
+    left: 35%;
+    text-align: center;
+    em:1.5;
 }
-.rating > input { display: none; }
-.rating > label:before {
-    margin: 5px;
-    font-size: 1.25em;
-    font-family: FontAwesome;
-    display: inline-block;
-    content: "\f005";
+.listeEtoile ul {
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+ }
+.listeEtoile ul li {
+    display:inline-block;
+    width: 16px;
+    text-align: left;
+    list-style-type: none;
 }
-.rating > .half:before {
-    content: "\f089";
+.listeEtoile ul li img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.favorites{
+    border: none;
     position: absolute;
+    top: 75%;
+    bottom: 0;
+    left: 43%;
+    text-align: center;
 }
-.rating > label {
-    color: #ddd;
-    float: right;
+.coeur{
+    width: 40px;
+    opacity: 1;
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+
+
+
+
+
+
+
 
 
 /*
-Favoris
+Emoticones
 */
 .coeur {
    color: #ff0000;
@@ -111,14 +124,14 @@ Grille d'affichage
     bottom: 0;
     left: 0;
     right: 0;
-    height: auto;
+    height: 390px;
     width: auto;
     transition: .5s ease;
     opacity: 0;
     background-color: rgba(100,149,237,0.9);
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 7%;
+    margin-bottom: 0%;
 
 }
 .mosaique:hover .overlay {
@@ -138,7 +151,21 @@ Grille d'affichage
     width: 280px;
     height: auto;
     padding-left: -10%;
+    padding-bottom: 50px;
 }
+
+.moyenne>img{
+    top: 0;
+    size: 1em;
+    height: 30px;
+    border-radius: 10px;
+}
+.moyenne{
+    margin-top: -52px;
+}
+
+
+
 
 
 /*
@@ -176,4 +203,16 @@ For no result page
 
 .navbar-header{
     height: 64px;
+}
+
+.comment{
+    margin-top: 10px;
+    position: relative;
+    border: solid black;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.comments{
+    margin-top: 20px;
 }
