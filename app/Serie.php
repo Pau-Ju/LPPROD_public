@@ -186,7 +186,7 @@ class Serie extends Model
 
     public static function getAdvise($user_id, $interests){
         $series = DB::select("with numerator as (
-                              SELECT pFAV.id_Post_Serie as idFavoriteSerie, pOther.id_Post_Serie as idOtherSerie,
+                              SELECT distinct pFAV.id_Post_Serie as idFavoriteSerie, pOther.id_Post_Serie as idOtherSerie,
                               sum(pFAV.term_Frequency * k.idf * pOther.term_Frequency * k.idf) as numValue
                               FROM posting pFAV, posting pOther, keywords k
                               WHERE pFAV.id_Post_Keyword = pOther.id_Post_Keyword
@@ -197,7 +197,7 @@ class Serie extends Model
                                                         WHERE name in " . $interests . ")                     
                               GROUP BY pFAV.id_Post_Serie, pOther.id_Post_Serie)
                             
-                            (SELECT s.id_Serie as id_Serie, s.name as name, n.numValue / (
+                            (SELECT distinct s.id_Serie as id_Serie, s.name as name, n.numValue / (
                                                   sqrt((SELECT sum(power(term_Frequency * idf, 2))
                                                         FROM posting p, keywords k
                                                         WHERE p.id_Post_Keyword = k.id_word
@@ -216,9 +216,9 @@ class Serie extends Model
                               AND s.id_Serie = notes.id_Notes_Serie
                               AND s.name not in ".$interests."
                               GROUP BY s.name, s.image_link, score, id_Serie
-                              ORDER BY 2 DESC, 1)
+                              ORDER BY score DESC)
                               UNION 
-                              (SELECT s.id_Serie as id_Serie, s.name as name, n.numValue / (
+                              (SELECT distinct s.id_Serie as id_Serie, s.name as name, n.numValue / (
                                                   sqrt((SELECT sum(power(term_Frequency * idf, 2))
                                                         FROM posting p, keywords k
                                                         WHERE p.id_Post_Keyword = k.id_word
@@ -238,10 +238,33 @@ class Serie extends Model
 													 FROM notes )
                               AND s.name not in ".$interests."
                               GROUP BY s.name, s.image_link, score, id_Serie
-                              ORDER BY 2 DESC, 1)
+                              ORDER BY score DESC)
                               ");
 
         return $series;
+    }
+
+
+    public static function getUniqueAdvise($user_id, $ids){
+            $series = DB::SELECT("(SELECT distinct s.name as name, s.id_Serie as id_Serie, s.image_link as image_link, cast(round(2*avg(notes.note))/2 as decimal(2,1)) as moyenne,
+                                    ROUND((SELECT distinct no.note 
+                                                            FROM notes no 
+                                                            WHERE no.id_Notes_User = ".$user_id."
+                                                            AND no.id_Notes_Serie = s.id_Serie), 1) as note
+                             FROM series as s, notes as notes
+                             WHERE s.id_Serie = notes.id_Notes_Serie
+                             AND s.id_Serie in ".$ids."
+                             GROUP BY s.name, s.image_link, s.id_Serie
+                             ORDER BY s.name)
+                             union
+                             (SELECT distinct se.name as name, se.id_Serie as id_Serie, se.image_link as image_link, 3 as moyenne, 0 as note
+                             FROM series as se
+                             WHERE se.id_Serie not in (SELECT  distinct notes.id_Notes_Serie as id_Serie 
+													 FROM notes )
+													 AND se.id_Serie in ".$ids."
+                             GROUP BY se.name, se.image_link, se.id_Serie
+                             ORDER BY se.name)");
+            return $series;
     }
 
 

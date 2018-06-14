@@ -10,7 +10,6 @@
                                  class="img-responsive image"/>
                             <div class="overlay">
                                 <div class="text"><?php echo ucfirst(strtolower($serie->name)); ?></div>
-
                                 <?php ($id = $serie->id_Serie); ?>
                                 <?php if(auth()->guard()->check()): ?>
                                     <div class="rating">

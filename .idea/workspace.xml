@@ -5,19 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aee88db9-6ec9-4ebf-931d-6be47973dcbe" name="Default" comment="To do :&#10;      - pagination&#10;      - favoris&#10;      - notes&#10;      - recommandations">
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/OcK0DNofCcag0qTEfGBLtwvNabmnjiTJIkRQrdpK" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/v564kAbtCE2PzliVNH5jJTKBf56vxcUJSoZTsZaV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/05c366ec51452768a62804277dba213d510091fd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/buffy_contre_les_vampires.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/burn_notice.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/desesperate_housewives.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/eleventh_hour.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/entourage.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/eureka.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/flashpoint.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/futurama.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ghost_wisperer.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gossip_girl.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/house.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/how_i_met_your_mother.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/medium.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/nip_tuck.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/private_practice.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/pushing_daisies.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/reaper.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sanctuary.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/scrubs.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/six_feet_under.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/south_park.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/spaced.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/supernatural.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/the_sopranos.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/the_tudors.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/the_vampire_diaries.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/tru_calling.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/true_blood.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/whitechapel.jwg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/womens_murder_club.jwg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/8NzCrIm3M0sxVtZa0HvWKKvOn6XgOejGtELDSpLZ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/FdYZitULwsmjcIsIAW1AcWbjtySODhmnuQHWXfdU" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/QQbM6Po5p7ZXW3Q1uTBovGe0cEYMRdzcSHbDa7fG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/TnUWvOgmQApGneOlXbbMGJWXSpbe7n1DKjF5NfwX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/bzKw8tZoBb9WQpIBLXAHshiS7kRbp0J2k3e21UFF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Serie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Serie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/advise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/advise.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/serie.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/serie.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/OcK0DNofCcag0qTEfGBLtwvNabmnjiTJIkRQrdpK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/b2KvasLQnTrs2P05NtdS6jANJ3qfKzbOFUx0lw2u" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/fa1QFnK7VSq8tGgglqXt44cbik4mpopGz2PAwcQC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/iBQhWSRHgVyeGACPDs5aLWWNsNleupIT1UwNRDU0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/nh1tc94vYVec6yuhE9b4zvOyEuimpKQXLpRtBKUb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/qUD4xJHDgKbmQyn3PjloYjBapHtCA1HOsy45phUo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/v564kAbtCE2PzliVNH5jJTKBf56vxcUJSoZTsZaV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/wDqiYsvlbGvAcMTqxkZC0inVT0e97wA4usiHA5tX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/5b53e5fb58aff0d13cd73442829cb172d1819bcf.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/5b53e5fb58aff0d13cd73442829cb172d1819bcf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/94ffc1d473d12efd2f4bc86c1a3fa6667352723a.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/94ffc1d473d12efd2f4bc86c1a3fa6667352723a.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,35 +101,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="400.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/errors/400.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="283" column="130" selection-start-line="283" selection-start-column="130" selection-end-line="283" selection-end-column="130" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -150,16 +158,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SearchContoller.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$USER_HOME$/Bureau/startyourdev-code-note-etoile/startyourdev-code-note-etoile.html" />
@@ -177,16 +180,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AjaxController.php" />
         <option value="$PROJECT_DIR$/app/Comment.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SerieController.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/resources/views/serie.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TopController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LastController.php" />
-        <option value="$PROJECT_DIR$/resources/views/advise.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FavoritesController.php" />
-        <option value="$PROJECT_DIR$/app/Serie.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Notifications/ResetPassword.php" />
         <option value="$PROJECT_DIR$/resources/views/errors/HTTP400.html" />
         <option value="$PROJECT_DIR$/resources/views/errors/400.blade.php" />
@@ -206,7 +202,16 @@
         <option value="$PROJECT_DIR$/resources/views/errors/503.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/serie.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/advise.blade.php" />
+        <option value="$PROJECT_DIR$/app/Serie.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdviseController.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -315,10 +320,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="959" />
+    <option name="x" value="960" />
     <option name="y" value="30" />
-    <option name="width" value="952" />
-    <option name="height" value="1002" />
+    <option name="width" value="960" />
+    <option name="height" value="1001" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -328,7 +333,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,7 +343,31 @@
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
               <item name="netflux" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netflux" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
@@ -355,14 +383,13 @@
             <path>
               <item name="netflux" type="b2602c69:ProjectViewProjectNode" />
               <item name="netflux" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="errors" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,18 +401,18 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/errors" />
+      <recent name="$PROJECT_DIR$/public/images/favorites" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images/notation" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/errors" />
-      <recent name="$PROJECT_DIR$/public/images/favorites" />
-      <recent name="$PROJECT_DIR$/public/images/notation" />
-      <recent name="$PROJECT_DIR$/public/js" />
-      <recent name="$PROJECT_DIR$/public/css/font-awesome" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -457,7 +484,17 @@
       <workItem from="1528899326667" duration="1835000" />
       <workItem from="1528902817959" duration="1511000" />
       <workItem from="1528906222840" duration="3807000" />
-      <workItem from="1528911575416" duration="1183000" />
+      <workItem from="1528911575416" duration="2163000" />
+      <workItem from="1528963080867" duration="1201000" />
+      <workItem from="1528964294704" duration="247000" />
+      <workItem from="1528964907157" duration="860000" />
+      <workItem from="1528971151746" duration="241000" />
+      <workItem from="1528971471492" duration="2679000" />
+      <workItem from="1528977166757" duration="634000" />
+      <workItem from="1528978362975" duration="21000" />
+      <workItem from="1528983741786" duration="126000" />
+      <workItem from="1528992397311" duration="65000" />
+      <workItem from="1529010049927" duration="3466000" />
     </task>
     <task id="LOCAL-00001" summary="Adding of confirmation mail after registered">
       <created>1516487142260</created>
@@ -477,31 +514,31 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295361000" />
+    <option name="totallyTimeSpent" value="305881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="30" width="1922" height="1004" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="15" visible="true" weight="0.3203125" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3294271" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32924107" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3294271" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32885906" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19427083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2046875" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32916668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="16" weight="0.3294271" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="15" visible="true" weight="0.32138857" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32965517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -538,52 +575,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Passwords/CanResetPassword.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2656" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBroker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3285" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBrokerManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1721" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/AuthenticationException.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4220" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-735" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/CreatesUserProviders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-854" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/DatabaseUserProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1772" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2499" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/GenericUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1534" />
@@ -639,41 +630,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AjaxController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1126" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Serie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="25" lean-forward="true" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="216" column="20" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Bureau/ErrorPages/HTTP400.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Bureau/ErrorPages/HTTP404.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Bureau/ErrorPages/HTTP400.html" />
+    <entry file="file://$USER_HOME$/Bureau/ErrorPages/HTTP404.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/errors/401.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
@@ -738,13 +701,6 @@
         <state relative-caret-position="-395" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="108" selection-start-line="33" selection-start-column="108" selection-end-line="33" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/errors/403.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -792,24 +748,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/errors/400.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="283" column="130" selection-start-line="283" selection-start-column="130" selection-end-line="283" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-446" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="10" column="39" selection-end-line="81" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+        <state relative-caret-position="391">
+          <caret line="23" column="71" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="93" column="59" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/serie.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/advise.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="13" column="96" selection-start-line="13" selection-start-column="96" selection-end-line="13" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/errors/400.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Serie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="283" column="130" selection-start-line="283" selection-start-column="130" selection-end-line="283" selection-end-column="130" />
+        <state relative-caret-position="387">
+          <caret line="247" column="59" selection-start-line="247" selection-start-column="59" selection-end-line="247" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdviseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
         </state>
       </provider>
     </entry>

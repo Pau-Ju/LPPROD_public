@@ -3,17 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Serie;
-use \Illuminate\Support\Facades\DB;
 use \Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
 
 
     /**

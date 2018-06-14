@@ -20,6 +20,7 @@ class AdviseController extends Controller
     public function index()
     {
         $data=[];
+        $unique_data=[];
         $user_id = (int)Auth::user()->id;
 
         $interestedInto = Serie::getInterests($user_id);
@@ -27,10 +28,17 @@ class AdviseController extends Controller
         $interest = $this->createList($interestedInto, 'name');
 
         if(count($interestedInto)) {
-
             $data = Serie::getAdvise($user_id, $interest);
-
         }
+
+            foreach ($data as $item=>$value){
+                array_push($unique_data, $value->id_Serie);
+            }
+            $unique_data = array_unique($unique_data);
+            $ids = $this->createListWithoutColumn($unique_data);
+
+            $data = Serie::getUniqueAdvise($user_id,$ids);
+
 
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
             $perPage = 12;
@@ -54,6 +62,22 @@ class AdviseController extends Controller
         $return=" (";
         foreach ($data as $item){
             $return .= "'". $item->$column ."', ";
+        }
+        $return = substr($return, 0, -2) .") ";
+        return $return;
+    }
+
+    /**
+     * Permet de generer une liste comprehensible pour
+     * effectuer un "in" dans une requete
+     *
+     * @param $data
+     * @return string
+     */
+    public function createListWithoutColumn($data){
+        $return=" (";
+        foreach ($data as $item){
+            $return .=  $item .", ";
         }
         $return = substr($return, 0, -2) .") ";
         return $return;

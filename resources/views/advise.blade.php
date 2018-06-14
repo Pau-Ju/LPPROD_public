@@ -12,7 +12,6 @@
                                  class="img-responsive image"/>
                             <div class="overlay">
                                 <div class="text">{!! ucfirst(strtolower($serie->name))!!}</div>
-
                                 @php($id = $serie->id_Serie)
                                 @auth
                                     <div class="rating">

@@ -62,7 +62,7 @@
                             @endswitch
                         </div>
                     </div>
-                    <div class="col-md-8 col-md-offset-3 mosaique">
+                    <div class="col-md-8 col-md-offset-1">
                         <p><b>Date de sortie : </b>{{$serie->release_date}}</p>
                         <p><b>Auteur : </b>{{$serie->author}}</p>
                         <p><b>Synopsis : </b>{{$serie->synopsis}}</p>

@@ -60,7 +60,7 @@
                             <?php endswitch; ?>
                         </div>
                     </div>
-                    <div class="col-md-8 col-md-offset-3 mosaique">
+                    <div class="col-md-8 col-md-offset-1">
                         <p><b>Date de sortie : </b><?php echo e($serie->release_date); ?></p>
                         <p><b>Auteur : </b><?php echo e($serie->author); ?></p>
                         <p><b>Synopsis : </b><?php echo e($serie->synopsis); ?></p>

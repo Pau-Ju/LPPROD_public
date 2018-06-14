@@ -6,7 +6,6 @@ use App\Serie;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Auth;
-use \Illuminate\Support\Facades\DB;
 
 
 class SearchController extends Controller
