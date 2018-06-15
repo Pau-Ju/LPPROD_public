@@ -16,8 +16,7 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-    {
+    public function index(Request $request){
         $query = explode(" ", $request->get('s'));
 
         $in = "";
@@ -32,7 +31,6 @@ class SearchController extends Controller
         }else{
             $series = Serie::getSearchResults($in);
         }
-
 
 
         $currentPage = LengthAwarePaginator::resolveCurrentPage();

@@ -17,14 +17,12 @@ class AdviseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
         $data=[];
         $unique_data=[];
         $user_id = (int)Auth::user()->id;
 
         $interestedInto = Serie::getInterests($user_id);
-
         $interest = $this->createList($interestedInto, 'name');
 
         if(count($interestedInto)) {
@@ -38,7 +36,6 @@ class AdviseController extends Controller
             $ids = $this->createListWithoutColumn($unique_data);
 
             $data = Serie::getUniqueAdvise($user_id,$ids);
-
 
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
             $perPage = 12;

@@ -209,7 +209,8 @@ class Serie extends Model
                                                         AND p.id_Post_Serie = n.idOtherSerie))) score, 
                                                         cast(round(2*avg(notes.note))/2 as decimal(2,1)) as moyenne,
                                                         s.image_link as image_link,
-                                                        ROUND((SELECT distinct no.note FROM notes no WHERE no.id_Notes_User = " . $user_id . " and no.id_Notes_Serie = s.id_Serie), 1) as note
+                                                        ROUND((SELECT distinct no.note FROM notes no WHERE no.id_Notes_User = " . $user_id . " and no.id_Notes_Serie = s.id_Serie), 1) 
+                                                        as note
                                                         
                               FROM numerator n, series s, notes 
                               WHERE n.idOtherSerie = s.id_Serie

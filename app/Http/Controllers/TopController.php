@@ -21,22 +21,16 @@ class TopController extends Controller
     public function index()
     {
         if(Auth::id()){
-
             $user_id = (int)Auth::user()->id;
-
             $top = Serie::getSeriesTopLogged($user_id);
         }else{
             $top = Serie::getSeriesTop();
         }
 
-
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
         $perPage = 12;
-
         $path=LengthAwarePaginator::resolveCurrentPath();
-
         $series = new LengthAwarePaginator(array_slice($top, $perPage * ($currentPage - 1), $perPage), count($top), $perPage, $currentPage,['path'=>$path]);
-
 
         return view('top', compact( 'series'));
     }

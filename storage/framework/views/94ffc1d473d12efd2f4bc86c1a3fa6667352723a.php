@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
     <div class="container">
         <?php if(isset($series)&& count($series)): ?>
-            <h1> Nous vous <i class="fa fa-tripadvisor"></i> ces <i class="fa fa-film"></i>:</h1>
+            <h1> Nous vous recommandons ces <i class="fa fa-film"></i>:</h1>
             <div class="row">
                 <?php $__currentLoopData = $series; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $serie): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-xs-3 mosaique">

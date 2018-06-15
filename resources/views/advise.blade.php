@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         @if(isset($series)&& count($series))
-            <h1> Nous vous <i class="fa fa-tripadvisor"></i> ces <i class="fa fa-film"></i>:</h1>
+            <h1> Nous vous recommandons ces <i class="fa fa-film"></i>:</h1>
             <div class="row">
                 @foreach($series as $serie)
                     <div class="col-xs-3 mosaique">
